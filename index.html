@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Acionamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Gerador de Acionamento</h1>
+
+    <label for="analista">Analista NOC:</label>
+    <select id="analista">
+        <option value="Thalyson Silva">Thalyson Silva</option>
+        <option value="Bianca">Bianca</option>
+        <option value="Thyago">Thyago</option>
+    </select>
+
+    <label for="supervisor">Supervisor:</label>
+    <select id="supervisor">
+        <option value="Geraldicio Mota">Geraldicio Mota</option>
+        <option value="José Leandro">José Leandro</option>
+        <option value="Cláudio Baldez">Cláudio Baldez</option>
+    </select>
+
+    <label for="cn">CN:</label>
+    <select id="cn">
+        <option value="91">91</option>
+        <option value="96">96</option>
+        <option value="93">93</option>
+    </select>
+
+    <label for="estacao">Estação:</label>
+    <input type="text" id="estacao" placeholder="Digite a Estação">
+
+    <label for="alarme">Alarme:</label>
+    <select id="alarme">
+        <option value="AC">AC (SLA: 4 horas)</option>
+        <option value="ADIF">ADIF (SLA: 4 horas)</option>
+        <option value="ATEMP">ATEMP (SLA: 4 horas)</option>
+        <option value="AFRET">AFRET (SLA: 24 horas)</option>
+    </select>
+
+    <label for="ami">AMI:</label>
+    <input type="text" id="ami" placeholder="Digite o AMI">
+
+    <label for="ral">INC:</label>
+    <input type="text" id="ral" placeholder="Digite o INC">
+
+    <label for="prev_tecnico">Previsão do Técnico (em horas):</label>
+    <input type="number" id="prev_tecnico" placeholder="Ex: 1">
+
+    <label for="tecnico">Digite o Técnico Acionado:</label>
+    <input type="text" id="tecnico" placeholder="Digite o nome do Técnico Acionado">
+
+    <button onclick="gerarInformativo()">Gerar Informativo</button>
+
+    <div id="resultado"></div>
+    <button id="copiarBtn" style="display:none;" onclick="copiarTexto()">Copiar Informações</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
