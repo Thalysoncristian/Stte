@@ -1,48 +1,62 @@
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
     background-color: #121212;
     color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #ffffff;
 }
 
 input, select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    background-color: #1e1e1e;
+    background-color: #2e2e2e;
     color: #e0e0e0;
-    border: 1px solid #333;
-    text-transform: uppercase;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 input::placeholder {
     color: #888;
 }
 
-#resultado {
-    background-color: #1e1e1e;
-    padding: 15px;
-    margin-top: 20px;
-    border: 1px solid #333;
-    white-space: pre-wrap;
-    text-align: left;
-}
-
 button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 10px;
     background-color: #28a745;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -55,4 +69,78 @@ button:hover {
 
 #copiarBtn:hover {
     background-color: #0056b3;
+}
+
+#resultado {
+    background-color: #2e2e2e;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+#toggleModeBtn {
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 14px;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#toggleModeBtn:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para modo claro */
+.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.light-mode .container {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-mode input, 
+.light-mode select {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.light-mode #resultado {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.light-mode button {
+    background-color: #28a745;
+    color: white;
+}
+
+.light-mode button:hover {
+    background-color: #218838;
+}
+
+.light-mode #copiarBtn {
+    background-color: #007bff;
+}
+
+.light-mode #copiarBtn:hover {
+    background-color: #0056b3;
+}
+
+.light-mode #toggleModeBtn {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.light-mode #toggleModeBtn:hover {
+    background-color: #444;
 }
